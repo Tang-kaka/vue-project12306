@@ -29,5 +29,14 @@
     "less-loader": "^8.0.0",
     "prettier": "^2.4.1",
     "vue-template-compiler": "^2.6.14"
-  }
+  },
+  "description": "2117班联合项目",
+  "main": ".eslintrc.js",
+  "repository": {
+    "type": "git",
+    "url": "https://gitee.com/alicelinyuxin/vue-project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }
