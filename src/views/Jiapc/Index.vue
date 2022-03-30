@@ -1,0 +1,16 @@
+<template>
+  <Search></Search>
+</template>
+
+<script>
+import Search from "../../components/Jiapc/Search.vue"
+export default {
+    components:{
+        Search
+    }
+}
+</script>
+
+<style scoped>
+
+</style>
