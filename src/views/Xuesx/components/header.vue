@@ -1,14 +1,21 @@
 <template>
- <div class="res">
+  <div class="res">
+    <router-link to="/My" tag="span">
       <span> < </span>
-      <span>中国铁路12306</span>
-    </div>
+    </router-link>
+    <span>{{ title }}</span>
+  </div>
 </template>
 <script>
-
 export default {
   name: "Header",
-}
+  data() {
+    return {
+      title: "中国铁路12306",
+    };
+  },
+  // props:[title]
+};
 </script>
 <style  scoped>
 .res {
@@ -18,12 +25,12 @@ export default {
   display: flex;
   justify-content: flex-start;
   color: #e3f1f2;
-  font-size: .22rem;
+  font-size: 0.22rem;
 }
-.res>span:nth-child(1){
-  margin-left:.2rem;
+.res > span:nth-child(1) {
+  margin-left: 0.2rem;
 }
-.res>span:nth-child(2){
-  margin-left:.77rem;
+.res > span:nth-child(2) {
+  margin-left: 0.77rem;
 }
 </style>

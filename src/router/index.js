@@ -1,26 +1,35 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 // import HomeView from "../views/HomeView.vue";
+import My from "../views/Xuesx/My.vue"
+import Notice from "../views/Xuesx/Notice.vue"
+import NoticeList from "../views/Xuesx/NoticeList.vue"
 
+//use 函数是吧插件安装到vue框架里，插上插件
 Vue.use(VueRouter);
 
 const routes = [
   {
-    path: "/",
-    name: "home",
-    // component: HomeView,
+    path: "/My",
+    name: "My",
+    component: My,
   },
   {
-    path: "/about",
-    name: "about",
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    // component: () =>
-    //   import(/* webpackChunkName: "about" */ "../views/AboutView.vue"),
+    path: "/NoticeList",
+    name: "NoticeList",
+    component: NoticeList
   },
+  {
+    path: "/Notice",
+    name: "Notice",
+    component: Notice
+  },
+  // {
+  //   path: '*',
+  //   component: NoPage组件
+  // }
 ];
-
+//2.创建vue-routder对象
 const router = new VueRouter({
   mode: "history",
   base: process.env.BASE_URL,

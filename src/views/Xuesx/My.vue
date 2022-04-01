@@ -4,8 +4,7 @@
     <Indent></Indent>
     <Third></Third>
     <Fourth></Fourth>
-    <Fourth></Fourth>
-    <Fourth></Fourth>
+    <Botm></Botm>
   </div>
 </template>
 
@@ -14,6 +13,8 @@ import Top from "./components/Top.vue";
 import Indent from "./components/Indent.vue";
 import Third from "./components/Third.vue";
 import Fourth from "./components/Fourth.vue";
+import Botm from "./components/Botm.vue";
+
 export default {
   name: "My",
   components: {
@@ -21,6 +22,7 @@ export default {
     Indent,
     Third,
     Fourth,
+    Botm,
   },
 };
 </script>
@@ -29,6 +31,11 @@ export default {
 @import url("./assets/iconfont/iconfont.css");
 #My {
   background-color: #f5f5f5;
-  background-image: linear-gradient(to bottom, #228cfc, #fff);
+  background-image: linear-gradient(
+    to bottom,
+    #228cfc 10%,
+    #f5f5f5 20%,
+    #f5f5f5 70%
+  );
 }
 </style>

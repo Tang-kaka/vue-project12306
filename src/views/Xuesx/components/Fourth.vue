@@ -1,42 +1,19 @@
 <template>
-  <div id="Fourth">
-    <div class="first">
-      <div class="box1">出行向导</div>
+  <div id="Fourth" >
+    <div class="first" v-for="items in obj" >
+      <div class="box1">{{items.str1}}</div>
       <div class="box2">
         <div class="one">
-          <div>
-            <span class="iconfont icon-pingmu"></span>
-            <p>车站大屏</p>
-          </div>
-          <div>
-            <span class="iconfont icon-shikebiao"></span>
-            <p>时刻表</p>
-          </div>
-          <div>
-            <span class="iconfont icon-shikebiao"></span>
-            <p>起售时间</p>
-          </div>
-          <div>
-            <span class="iconfont icon-31shijian"></span>
-            <p>正晚点查询</p>
+          <div v-for="(item, index) in items.list1" :key="index">
+            <span :class="item.icon"></span>
+            <p>{{item.str}}</p>
           </div>
         </div>
         <div class="one">
-          <div>
-            <span class="iconfont icon-chaxun"></span>
-            <p>票价查询</p>
+          <div v-for="(item, index) in items.list2" :key="index">
+            <span :class="item.icon"></span>
+            <p>{{item.str}}</p>
           </div>
-          <div>
-            <span class="iconfont icon-huoche"></span>
-            <p>换乘时间</p>
-          </div>
-          <div>
-            <span class="iconfont icon-zhaofangzi"></span>
-            <p>代售点查询</p>
-          </div>
-          <div>
-            <span class="iconfont icon-diandiandian-copy"></span>
-            <p>更多</p>
           </div>
         </div>
       </div>
@@ -47,20 +24,145 @@
 <script>
 export default {
   name: "Fourth",
+  data() {
+    return {
+      obj: {
+        obj1: {
+          str1: "出行导航",
+          list1: [
+            {
+              icon: "iconfont icon-shikebiao",
+              str: "车站大屏",
+            },
+            {
+              icon: "iconfont icon-shikebiao",
+              str: "时刻表",
+            },
+            {
+              icon: "iconfont icon-shikebiao",
+              str: "起售时间",
+            },
+            {
+              icon: "iconfont icon-31shijian",
+              str: "正晚点查询",
+            },
+          ],
+          list2: [
+            {
+              icon: "iconfont icon-chaxun",
+              str: "票价查询",
+            },
+            {
+              icon: "iconfont icon-huoche",
+              str: "换乘时间",
+            },
+            {
+              icon: "iconfont icon-zhaofangzi",
+              str: "代售点查询",
+            },
+            {
+              icon: "iconfont icon-diandiandian-copy",
+              str: "更多",
+            },
+          ],
+        },
+        obj2: {
+          str1: "出行导航",
+          list1: [
+            {
+              icon: "iconfont icon-shikebiao",
+              str: "车站大屏",
+            },
+            {
+              icon: "iconfont icon-shikebiao",
+              str: "更多",
+            },
+            {
+              icon: "iconfont icon-diandiandian-copy",
+              str: "更多",
+            },
+            {
+              icon: "iconfont icon-diandiandian-copy",
+              str: "更多",
+            },
+          ],
+          list2: [
+            {
+              icon: "iconfont icon-shikebiao",
+              str: "车站大屏",
+            },
+            {
+              icon: "iconfont icon-shikebiao",
+              str: "更多",
+            },
+            {
+              icon: "iconfont icon-diandiandian-copy",
+              str: "更多",
+            },
+            {
+              icon: "iconfont icon-diandiandian-copy",
+              str: "更多",
+            },
+          ],
+        },
+        obj3: {
+          str1: "出行导航",
+          list1: [
+            {
+              icon: "iconfont icon-shikebiao",
+              str: "车站大屏",
+            },
+            {
+              icon: "iconfont icon-shikebiao",
+              str: "更多",
+            },
+            {
+              icon: "iconfont icon-diandiandian-copy",
+              str: "更多",
+            },
+            {
+              icon: "iconfont icon-diandiandian-copy",
+              str: "更多",
+            },
+          ],
+          list2: [
+            {
+              icon: "iconfont icon-shikebiao",
+              str: "车站大屏",
+            },
+            {
+              icon: "iconfont icon-shikebiao",
+              str: "更多",
+            },
+            {
+              icon: "iconfont icon-diandiandian-copy",
+              str: "更多",
+            },
+            {
+              icon: "iconfont icon-diandiandian-copy",
+              str: "更多",
+            },
+          ],
+        },
+      },
+    };
+  },
 };
 </script>
 
 <style scoped>
 #Fourth {
   width: 100%;
-  height: 2.02rem;
+  /* height: 2.02rem; */
   display: flex;
   margin-top: 0.1rem;
+  display: flex;
+  flex-direction: column;
 }
 #Fourth .first {
   width: 3.56rem;
-  height: 2.02rem;
-  margin: 0 auto;
+  /* height: 2.02rem; */
+  margin: 0.05rem auto;
   border-radius: 0.06rem;
   background-color: white;
 }
