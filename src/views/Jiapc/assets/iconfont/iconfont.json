@@ -1,0 +1,58 @@
+{
+  "id": "3291747",
+  "name": "手机端12306",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "21308110",
+      "name": "状态转换",
+      "font_class": "zhuangtaizhuanhuan",
+      "unicode": "e619",
+      "unicode_decimal": 58905
+    },
+    {
+      "icon_id": "4948953",
+      "name": "放大镜",
+      "font_class": "fangdajing",
+      "unicode": "e610",
+      "unicode_decimal": 58896
+    },
+    {
+      "icon_id": "7949503",
+      "name": "评论",
+      "font_class": "pinglun",
+      "unicode": "e695",
+      "unicode_decimal": 59029
+    },
+    {
+      "icon_id": "992719",
+      "name": "扫一扫",
+      "font_class": "saoyisao",
+      "unicode": "e60e",
+      "unicode_decimal": 58894
+    },
+    {
+      "icon_id": "9097173",
+      "name": "铁路",
+      "font_class": "tielu",
+      "unicode": "e603",
+      "unicode_decimal": 58883
+    },
+    {
+      "icon_id": "10127086",
+      "name": "铁路",
+      "font_class": "tielu1",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "10543522",
+      "name": "铁路",
+      "font_class": "tielu2",
+      "unicode": "e624",
+      "unicode_decimal": 58916
+    }
+  ]
+}
