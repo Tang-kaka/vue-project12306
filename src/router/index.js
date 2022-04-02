@@ -1,14 +1,19 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-// import HomeView from "../views/HomeView.vue";
 import My from "../views/Xuesx/My.vue"
 import Notice from "../views/Xuesx/Notice.vue"
 import NoticeList from "../views/Xuesx/NoticeList.vue"
+import Reg from "../views/Xuesx/Reg.vue"
 
 //use 函数是吧插件安装到vue框架里，插上插件
 Vue.use(VueRouter);
 
 const routes = [
+  {
+    path: "/",
+    name: "My",
+    component: My,
+  },
   {
     path: "/My",
     name: "My",
@@ -23,6 +28,11 @@ const routes = [
     path: "/Notice",
     name: "Notice",
     component: Notice
+  },
+  {
+    path: "/Reg",
+    name: "Reg",
+    component: Reg
   },
   // {
   //   path: '*',

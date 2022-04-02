@@ -10,7 +10,9 @@
     <div>常见问题<span>></span></div>
     <div>使用须知<span>></span></div>
     <div>服务规范<span>></span></div>
-    <div>铁路保险<span>></span></div>
+    <router-link to="Reg" tag="span">
+      <div>注册<span>></span></div>
+    </router-link>
     <div class="last">关于<span>版本号5.5.1.4 ></span></div>
   </div>
 </template>

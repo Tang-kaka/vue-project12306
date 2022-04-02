@@ -1,6 +1,10 @@
 <template>
   <div>
     <Header></Header>
+    <div class="ipt">
+      <input type="text" placeholder="请搜索公告" />
+      <span class="iconfont icon-chaxun"></span>
+    </div>
     <div id="NoticeList">
       <router-link to="Notice" tag="span">
         <div v-for="items in NoticeList">
@@ -35,7 +39,7 @@ export default {
     return {
       NoticeList: [
         {
-          text: "公告",
+          text: "",
           time: "2022-03-26",
           id: "001",
         },
@@ -58,23 +62,47 @@ export default {
     };
   },
   created() {
-    // let data = new URLSearchParams();
-    // data.append("txet", this.text);
-    // data.append("id", this.id);
     axios({
-      url: "http://4a6469w524.51vip.biz/notice/findNotices",
-      method: "get",
-      //   headers: {
-      //     "Content-Type": "application/x-www-form-urlencoded",
-      //   },
-    }).then((res) => {
-      this.text = "";
-    });
+      url: "http://10.12.153.49:8300/notice/findNotices",
+      method: "post",
+      data: {
+        noticeContent: "",
+        noticeName: "",
+      },
+    })
+      .then((res) => {
+        console.log("res.data", res.data);
+        this.NoticeList = noticeName.data;
+      })
+      .catch((err) => {
+        console.log("服务器出错", err);
+      });
   },
 };
 </script>
 
 <style scoped>
+.ipt {
+  width: 3.56rem;
+  height: 0.3rem;
+  margin: 0.1rem auto;
+  border: 1px solid #dfdfdf;
+  border-radius: 0.3rem;
+  overflow: hidden;
+  line-height: 0.3rem;
+}
+.ipt input {
+  height: 0.3rem;
+  width: 3rem;
+  margin-left: 10px;
+}
+.ipt span {
+  display: inline-block;
+  width: 0.3rem;
+  height: 0.3rem;
+  text-align: center;
+  line-height: 0.3rem;
+}
 #NoticeList {
   width: 3.56rem;
   height: 3.2rem;

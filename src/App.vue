@@ -9,7 +9,7 @@ export default {
 };
 </script>
 
-<style lang="less">
+<style scoped>
 @import url("./assets/css/reset.css");
 #app {
   -webkit-font-smoothing: antialiased;

@@ -1,5 +1,5 @@
 module.exports = {
-  // lintOnSave: false,
+  lintOnSave: false,
   // devServer: {
   //   //设置代理
   //   proxy: { //代理是从指定的target后面开始匹配的，不是任意位置；配置pathRewrite可以做替换
