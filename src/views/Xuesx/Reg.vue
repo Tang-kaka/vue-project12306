@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Header></Header>
+    <Header :title="title"></Header>
     <Register></Register>
   </div>
 </template>
@@ -13,6 +13,11 @@ export default {
   components: {
     Header,
     Register,
+  },
+  data() {
+    return {
+      title: "注册",
+    };
   },
 };
 </script>

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Header></Header>
+    <Header :title="title"></Header>
     <div class="ipt">
       <input type="text" placeholder="请搜索公告" />
       <span class="iconfont icon-chaxun"></span>
@@ -8,7 +8,9 @@
     <div id="NoticeList">
       <router-link to="Notice" tag="span">
         <div v-for="items in NoticeList">
-          {{ items.text }}<span>{{ items.time }}</span>
+          <p>{{ items.text }}</p>
+          <!-- {{ items.text }} -->
+          <span>{{ items.time }}</span>
         </div>
       </router-link>
       <!-- <router-link to="Notice" tag="span">
@@ -37,12 +39,13 @@ export default {
   },
   data() {
     return {
+      title: "公告",
       NoticeList: [
-        {
-          text: "",
-          time: "2022-03-26",
-          id: "001",
-        },
+        // {
+        //   text: "",
+        //   time: "2022-03-26",
+        //   id: "001",
+        // },
         // {
         //   text: "公告",
         //   time: "2022-03-26",
@@ -63,16 +66,11 @@ export default {
   },
   created() {
     axios({
-      url: "http://10.12.153.49:8300/notice/findNotices",
-      method: "post",
-      data: {
-        noticeContent: "",
-        noticeName: "",
-      },
+      url: "http://localhost:3000/NoticeList",
+      method: "get",
     })
       .then((res) => {
-        console.log("res.data", res.data);
-        this.NoticeList = noticeName.data;
+        this.NoticeList = res.data;
       })
       .catch((err) => {
         console.log("服务器出错", err);
@@ -108,7 +106,6 @@ export default {
   height: 3.2rem;
   background-color: white;
   margin: 0.1rem auto 0.2rem;
-
   border-radius: 0.06rem;
 }
 #NoticeList div {
@@ -118,12 +115,18 @@ export default {
   margin: 0 auto;
   border-bottom: 1px solid #dfdfdf;
   font-weight: 700;
+  display: flex;
+  justify-content: space-between;
+}
+#NoticeList div p {
+  overflow: hidden;
+  width: 2.5rem;
+  height: 0.44rem;
 }
 #NoticeList .last {
   border-bottom: none;
 }
 #NoticeList div span {
-  float: right;
   color: #b3b3b3;
   font-size: 0.12rem;
   font-weight: 700;

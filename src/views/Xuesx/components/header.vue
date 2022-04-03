@@ -9,12 +9,12 @@
 <script>
 export default {
   name: "Header",
-  data() {
-    return {
-      title: "中国铁路12306",
-    };
-  },
-  // props:[title]
+  props: ["title"],
+  // data() {
+  //   return {
+  //     title: "中国铁路12306",
+  //   };
+  // },
 };
 </script>
 <style  scoped>
@@ -31,6 +31,6 @@ export default {
   margin-left: 0.2rem;
 }
 .res > span:nth-child(2) {
-  margin-left: 0.77rem;
+  margin: 0 auto;
 }
 </style>

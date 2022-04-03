@@ -1,9 +1,12 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
+// import { component } from "vue/types/umd";
 import My from "../views/Xuesx/My.vue"
 import Notice from "../views/Xuesx/Notice.vue"
 import NoticeList from "../views/Xuesx/NoticeList.vue"
 import Reg from "../views/Xuesx/Reg.vue"
+import MyAccount from "../views/Xuesx/MyAccount.vue"
+// import Top from "../views/Xuesx/components/Top.vue"
 
 //use 函数是吧插件安装到vue框架里，插上插件
 Vue.use(VueRouter);
@@ -33,6 +36,11 @@ const routes = [
     path: "/Reg",
     name: "Reg",
     component: Reg
+  },
+  {
+    path: "/MyAccount",
+    name: "MyAccount",
+    component: MyAccount
   },
   // {
   //   path: '*',

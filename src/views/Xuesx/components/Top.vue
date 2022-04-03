@@ -9,7 +9,9 @@
         <span class="iconfont icon-user-full"></span>
       </div>
       <div class="second2">
-        <p>薛顺鑫</p>
+        <router-link to="MyAccount" tag="p">
+          <p>薛顺鑫</p>
+        </router-link>
         <span class="one">
           手机核验成功&nbsp;<span class="iconfont icon-duihao"></span>
         </span>
